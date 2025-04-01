@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',length:255);
             $table->text('description')->nullable();
+            $table->string('slig')->unique();
             $table->string('thumbnail')->comment('Hình đại diện');
             $table->boolean('status')->default(1);
             $table->timestamps();

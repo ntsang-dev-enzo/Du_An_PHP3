@@ -11,4 +11,11 @@
             orci vel ultricies interdum, dui sem rutrum neque, et bibendum est velit at turpis.</p>
             <div class="btn btn-primary mb-3 mt-2">Đây là cái nút!</div>
     </div>
+    <ul style="list-style-type: none; text-align: left;">
+    @foreach ( $categories as $category )
+    {{-- @dd($category) --}}
+    
+        <li style="color: aliceblue">{{ $category->name }}</li>
+    </ul>
+    @endforeach
 @endsection
