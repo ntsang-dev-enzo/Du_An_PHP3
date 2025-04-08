@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class, 'index']);
 Route::get('/chi-tiet-san-pham/{slug}',[ProductController::class, 'detail']);
 Route::get('/dm-san-pham/{id}',[ProductController::class, 'categories']);
-
+Route::get('/hello/{id}',[ProductController::class, 'hello']);
 
 
 Route::get('/nguoi-dung', function(){
