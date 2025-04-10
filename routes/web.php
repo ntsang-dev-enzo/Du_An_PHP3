@@ -1,12 +1,10 @@
 <?php
 
+use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\ProductController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('welcome');
-=======
 
 Route::get('/',[HomeController::class, 'index']);
 Route::get('/chi-tiet-san-pham/{slug}',[ProductController::class, 'detail']);
@@ -21,8 +19,6 @@ Route::get('/nguoi-dung', function(){
     $data = $query->get();
     foreach($data as $user) echo "<p>{$user->name}</p>";
 
-
->>>>>>> 013d6b343c19b05fe850536925015459d24a7687
 });
 
 Route::get('/dashboard', function () {
